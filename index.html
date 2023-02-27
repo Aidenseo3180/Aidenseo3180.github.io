@@ -1,7 +1,187 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/03cdc48b9c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <title>Aiden's Portfolio</title>
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>My App</header>
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="#aboutMe"><i class="fa-solid fa-user"></i>About Me</a></li>
+            <li><a href="#portfolio"><i class="fa-solid fa-file"></i>Projects</a></li>
+            <li><a href="#resume"><i class="fa-solid fa-book"></i>My Resume</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-message"></i>Contact</a></li>
+        </ul>
+        <div class="menutext">
+            <a target="_blank" href="https://www.linkedin.com/in/aiden-seo-03004a248/"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/Aidenseo3180"><i class="fa-brands fa-github"></i></a>
+            <p>Copyright © Aiden Seo<br>Made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+    <!-- ------------header ---------------- -->
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <h1 class="introText"></h1>
+                <p class="nameText"></p>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------about me--------------- -->
+    <div id="aboutMe">
+        <div class="container">
+            <div class="aboutme-row">
+                <div class="aboutme-col-1">
+                    <img src="images/work-1.png">
+                </div>
+                <div class="aboutme-col-2">
+                    <h1>About Me</h1>
+                    <div class="aboutme-list">
+                        <p>
+                            Hello, I'm currently a Junior Computer Engineering<br>Student who goes to the University of Pittsburgh
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------projects------------ -->
+    <div id="portfolio">
+        <div class="container">
+            <div class="portfolio-inner">
+                <h1 class="portfolio-text">Projects</h1>
+                <div class="wrapper">
+                    <img src="images/background_image_2.jpg">
+                    <div class="portfolio-class">
+                        <h2>ECE1110</h2>
+                        <p>This is an example</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="images/background_image_2.jpg">
+                    <div class="portfolio-class">
+                        <h2>ECE1110</h2>
+                        <p>This is an example</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <img src="images/background_image_2.jpg">
+                    <div class="portfolio-class">
+                        <h2>ECE1110</h2>
+                        <p>This is an example</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------resume------------- -->
+    <div id="resume">
+        <div class="contain">
+            <div class="resume-inner">
+                <div class="row">
+                    <div class="about-col-1">   <!--Left column-->
+                        <div class="back_image">
+                            <img src="images/preview_2.JPG">
+                        </div>
+                        <div class="front_image">
+                            <img src="images/preview_1.JPG">
+                        </div>
+                    </div>
+                    <div class="about-col-2">   <!--right column-->
+                        <h1 class="sub-title">Resume</h1>
+                        <div class="col-2-subtitle">
+                            <p>Here is the preview of my resume</p>
+                        </div>
+    
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>2020 - 2024</span><br>University of Pittsburgh</li>
+                                <li><span>2016 - 2020</span><br>Centreville Highschool</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Feb. 2023 - Present</span><br>Research Assistant</li>
+                                <li><span>Jan. 2023 - Present</span><br>Undergraduate Teaching Assistant</li>
+                                <li><span>Sept. 2022 - Present</span><br>Software QA Engineer Intern</li>
+                                <li><span>May. 2022 - Oct. 2022</span><br>Research Assistant</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                                <li><span>Software Language</span><br>JavaScript, TypeScript, C++, C#, C, Python, Java,<br>XML, Gherkin, MATLAB</li>
+                                <li><span>Hardware Language</span><br>VHDL, Verilog, MIPS, Assembly</li>
+                                <li><span>Environment</span><br>Linux, Git, vim, Eclipse, Docker, VMWare</li>
+                            </ul>
+                        </div>
+                        <a href="images/Aiden_Seo_Resume.pdf" download class="btn resume">Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------contact me-------------- -->
+    <div id="bright-background"></div>
+    <div id="blue-background"></div>
+    <div id="dark-blue-background"></div> 
+    <div id="contact">
+        <div class="blue-background"></div>
+        <div class="dark-blue-background"></div>
+        <div class="container">
+            <div class="contact-row">
+                <div class="contact-left">
+                    <h1 class="contact-subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>aidenseo919@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>703-901-3760</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    new TypeIt(".introText", {
+        strings: "Welcome to my<br>portfolio",
+        speed: 50,
+        waitUntilVisible: true,
+        afterComplete: function (instance) {
+            instance.destroy();
+            new TypeIt(".nameText", {
+            strings: "Hello, my name is Aiden Seo",
+            speed: 50,
+        }).go();
+        }
+    }).go();
+</script>
+</body>
 </html>
